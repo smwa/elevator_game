@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="elevator_game",
-    version="1.0.1",
+    version="1.0.2",
     author="Michael Smith",
     author_email="michael.smith.ok@gmail.com",
     description="A TUI game where you control elevators.",

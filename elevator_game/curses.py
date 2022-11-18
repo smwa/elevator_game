@@ -48,6 +48,7 @@ def __play_game(window: Window):
   window.nodelay(True)
   while not game.is_game_over:
     if game.tick_time_check():
+      render(game, window)
       if auto_load:
         people_on_floors = game.get_people_on_floors()
         for elevator in game.get_elevators():
@@ -56,6 +57,7 @@ def __play_game(window: Window):
               game.load_or_unload_passenger(person.get_name())
     try:
       input = window.getkey()
+      render(game, window)
       if input in string.ascii_lowercase:
         game.load_or_unload_passenger(input) # TODO catch error
       elif input in string.ascii_uppercase:
@@ -68,13 +70,13 @@ def __play_game(window: Window):
           game.open_door(selected_elevator) # TODO catch error
     except:
       pass
-    window.clear()
-    render(game, window)
     sleep(1 / 24)
 
 def render(game: Game, window: Window):
   global selected_elevator
   global auto_load
+  
+  window.clear()
 
   # Status bar
   window.move(1, 1)
