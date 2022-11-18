@@ -57,17 +57,17 @@ def __play_game(window: Window):
               game.load_or_unload_passenger(person.get_name())
     try:
       input = window.getkey()
-      render(game, window)
       if input in string.ascii_lowercase:
-        game.load_or_unload_passenger(input) # TODO catch error
+        game.load_or_unload_passenger(input)
       elif input in string.ascii_uppercase:
         selected_elevator = input
       elif input in string.digits:
         if selected_elevator is not None:
-          game.send_elevator_to_floor(selected_elevator, int(input)) # TODO catch error
+          game.send_elevator_to_floor(selected_elevator, int(input))
       elif input == '!':
         if selected_elevator is not None:
-          game.open_door(selected_elevator) # TODO catch error
+          game.open_door(selected_elevator)
+      render(game, window)
     except:
       pass
     sleep(1 / 24)
