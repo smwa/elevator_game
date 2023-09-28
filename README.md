@@ -7,16 +7,7 @@ Install with `pip install elevator_game`
 
 Play with `python3 -m elevator_game`
 
-You can also play by ssh'ing into the following address. You will need to accept the fingerprint prompt.
-
-`elevator@elevator.mechstack.dev`
-
-And you can play in browser if you don't mind the flickering:
-
-`http://67.205.139.95:8080/`
-
 ## Gameplay
-
 
 https://user-images.githubusercontent.com/4969375/202599601-de931caf-c849-4aa6-b32b-42625eecdaed.mp4
 
