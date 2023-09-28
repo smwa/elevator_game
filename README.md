@@ -10,4 +10,3 @@ Play with `python3 -m elevator_game`
 ## Gameplay
 
 https://user-images.githubusercontent.com/4969375/202599601-de931caf-c849-4aa6-b32b-42625eecdaed.mp4
-
